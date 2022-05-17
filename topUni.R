@@ -96,7 +96,7 @@ names(countries) <- c(   "italy"
 countries_df <- bind_rows(countries, .id = "name")
 
 countries_df <- countries_df %>% 
-  mutate(group = ifelse(name == "chile"|name == "china", "other", "g7"))
+  mutate(group = ifelse(name == "chile"|name == "china"|name == "pakistan", "other", "g7"))
 
 # l'italia non è diversa da paesi più sviluppati in termini di score assoluto
 countries_df %>% 
